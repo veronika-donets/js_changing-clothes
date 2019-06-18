@@ -13,7 +13,7 @@ Here are 8 items of clothing:
 
 Make an app that would allow to edit the names of the items:
 
-1. There is an "Edit" button next to each item. It should only become visible upon hovering the item.
+1. There is an "Edit" button next to each item.
 2. When the user clicks the button, the item transforms to an input field with the current name of the item as its initial value. If the user changes it and hits Enter, the input field hides and the item reappears, now with its new name.
 3. The user can then repeat the action.
 4. If the user leaves the field empty and presses Enter, remove the item from the list.
