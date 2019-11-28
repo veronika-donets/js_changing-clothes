@@ -1,0 +1,12 @@
+body {
+  display: flex;
+}
+
+.wrapper {
+  width: 250px;
+  margin: auto;
+}
+
+.ui.fluid.input > input {
+  width: 100% !important;
+}
