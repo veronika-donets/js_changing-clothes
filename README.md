@@ -1,5 +1,7 @@
 # Changing clothes
 
+-[DEMO LINK](https://veronika-donets.github.io/js_changing-clothes/index.html)
+
 Here are 8 items of clothing: 
 
 - Apron
