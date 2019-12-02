@@ -20,8 +20,11 @@ const setValue = (list, editIndex, editValue) => {
   return {
     type: SET_VALUE,
     items: list.map((item, index) => {
-      const val = (index === editIndex) ? editValue : item;
-      return val.trim();
+      const val = editValue.trim();
+      if (index === editIndex && val !== '') {
+        return val;
+      }
+      return item;
     }),
     selectedItem: -1,
   }
