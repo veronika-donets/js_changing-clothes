@@ -27,27 +27,32 @@ render = (state, dispatch) => {
     item.className = "item";
     clothesList.append(item);
 
-    const input = document.getElementsByClassName('input');
+    const inputWrapper = document.getElementsByClassName('input');
+    const input = document.getElementsByTagName('input');
     const clothes = document.getElementsByClassName('header');
     const button = document.getElementsByClassName('button');
 
-    input[i].addEventListener('keypress', event => {
+    inputWrapper[i].addEventListener('keypress', event => {
       if (event.code === "Enter") {
         store.dispatch(setValue(state.items, state.selectedItem, event.target.value))
       }
     });
 
-    button[i].addEventListener('click', () => dispatch({
-      type: SELECT_ITEM,
-      index: i,
-    }));
+    button[i].addEventListener('click', () => {
+      dispatch({
+        type: SELECT_ITEM,
+        index: i,
+      });
 
+    });
+
+    input[i].setAttribute("value", `${state.items[i]}`);
      if (i === state.selectedItem) {
        clothes[i].style.display = 'none';
-       input[i].style.display = 'block';
+       inputWrapper[i].style.display = 'block';
     } else {
        clothes[i].style.display = 'block';
-       input[i].style.display = 'none';
+       inputWrapper[i].style.display = 'none';
     }
   }
 };
